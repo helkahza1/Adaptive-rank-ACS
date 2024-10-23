@@ -156,7 +156,7 @@ for n = 2:numel(tvals)
     length(tvals)-(n)
     dt = tvals(n) - tvals(n-1);
     
-    [Vx_nn, Vy_nn, S_nn, size_krylov, size_krylov_bef, iter_krylov] = DIRK_stages_sylv4_coeff3_truncate(Vx_n, S_n, Vy_n, a, tol, A, Dv, dt, LL, U, myopx, myopy,mymean);
+    [Vx_nn, Vy_nn, S_nn, size_krylov, size_krylov_bef, iter_krylov] = Adaptive_Rank_ACS_DIRK(Vx_n, S_n, Vy_n, a, tol, A, Dv, dt, LL, U, myopx, myopy,mymean);
     Vx_n = Vx_nn;
     Vy_n = Vy_nn;
     S_n = S_nn;
