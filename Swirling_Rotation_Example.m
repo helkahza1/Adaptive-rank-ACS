@@ -114,6 +114,12 @@ epsilon_tol=1e-5;
 tol={epsilon_kappa, epsilon_GMRES,epsilon,epsilon_tol};
 
 %% Butcher Tableau for DIRK Method
+%% Backward Euler
+%a=[1];
+%% DIRK2
+%    gamma=1-1/sqrt(2);
+% a=[gamma,0;1-gamma,gamma];
+%% DIRK3
 a = [0.4358665215, 0, 0;
     0.5 * (1 - 0.4358665215), 0.4358665215, 0;
     -3 * 0.5 * 0.4358665215^2 + 4 * 0.4358665215 - 0.25, 3 * 0.5 * 0.4358665215^2 - 5 * 0.4358665215 + 5/4, 0.4358665215];
